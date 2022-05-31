@@ -44,20 +44,20 @@ class FirstFragment : Fragment() {
 
     private fun setValueInDollarSpace(coin: Double) {
         val dollar: Double = 4.76
-        binding.textviewFirst.text = "R$" + "%.2f".format((coin*dollar))
+        binding.textviewFirst.text = "Dollar value: " + "R$" + "%.2f".format((coin*dollar))
     }
 
     private fun listener2() {
         binding.apply {
             buttonFifith.setOnClickListener{
-                setValueInDollarSpace(binding.edittextThird.text.toString().toDouble())
+                setValueInEuroSpace(binding.edittextThird.text.toString().toDouble())
             }
         }
     }
 
     private fun setValueInEuroSpace(coin: Double) {
         val euro: Double = 5.04
-        binding.textviewFirst.text = "R$" + "%.2f".format((coin*euro))
+        binding.textviewSecond.text = "Euro value: " + "R$" + "%.2f".format((coin*euro))
     }
 
     override fun onDestroyView() {
