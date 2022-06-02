@@ -6,3 +6,4 @@
 
 * [My first app](https://github.com/yoruwitch/Use-Academy/tree/main/exerciseUA)
 * [Currency conversor](https://github.com/yoruwitch/Use-Academy/tree/main/Conversor) 
+* [ParcialDex](https://github.com/yoruwitch/Use-Academy/tree/main/ParcialDex)

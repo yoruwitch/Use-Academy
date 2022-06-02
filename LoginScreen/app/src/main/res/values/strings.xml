@@ -1,0 +1,21 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Login</string>
+    <string name="title_main">Pão de mel da Vick</string>
+    <string name="btn_login">Login</string>
+    <string name="btn_register">Register</string>
+    <string name="btn_confirm">Confirm</string>
+    <string name="login_title">Login</string>
+    <string name="password_login">Password</string>
+    <string name="email_login">Email</string>
+    <string name="name_register">Name</string>
+    <string name="country">Country</string>
+    <string name="city">City</string>
+    <string name="btn_save">Save</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="email_register">Type your email</string>
+    <string name="register_title">Register</string>
+    <string name="password_register">Password</string>
+    <string name="result">Result</string>
+    <string name="validate">Empty spaces!</string>
+
+</resources>
