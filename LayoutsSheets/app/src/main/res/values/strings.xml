@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">SheetsAndDialogs</string>
+    <string name="edit">Edit</string>
+    <string name="copy">Copy</string>
+    <string name="delete">Delete</string>
+    <string name="add">Add</string>
+    <string name="cut">Cut</string>
+    <string name="move">Move</string>
+    <string name="fav_game">My favorite game is The Elder Scrolls: V</string>
+    <string name="activate_sheet">Bottom Sheet</string>
+    <string name="dialog">Simple Dialog</string>
+    <string name="tvParagraph">"Hi! This is a sample paragraph! I'm learning a lot with Usemobile's bootcamp.Thank you so much for all this content!"</string>
+    <string name="custom_dialog">Custom Dialog</string>
+    <string name="presentation">Hi, this is the main menu with the bottom sheet and the two dialog alerts!
+    Just click in the buttons to see the action happening!</string>
+    <string name="no_btn">No</string>
+    <string name="okay_btn">Okay</string>
+</resources>

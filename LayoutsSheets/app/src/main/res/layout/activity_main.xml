@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/bottomSheetInclude"
+        layout="@layout/bottom_sheet"
+        android:visibility="visible"
+        />
+
+    <TextView
+        android:layout_gravity="center"
+        android:textSize="@dimen/textSize"
+        android:textColor="@color/black"
+        android:layout_marginBottom="800dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/presentation"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnBottomSheet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginEnd="200dp"
+        android:backgroundTint="@color/backgroundBottomSheet"
+        android:text="@string/activate_sheet"
+        android:textColor="#9C27B0"
+        android:textSize="16sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="200dp"
+        android:backgroundTint="@color/backgroundBottomSheet"
+        android:text="@string/dialog"
+        android:textColor="#9C27B0"
+        android:textSize="16sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnCustomDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="300dp"
+        android:backgroundTint="@color/backgroundBottomSheet"
+        android:text="@string/custom_dialog"
+        android:textColor="#9C27B0"
+        android:textSize="16sp" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
