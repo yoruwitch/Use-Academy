@@ -22,6 +22,8 @@ class SecondActivity : AppCompatActivity() {
         setViewPager()
     }
 
+    // Function to return to previous page on the menu bar:::
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             android.R.id.home -> {
@@ -32,11 +34,11 @@ class SecondActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
+    // Default android function to set the ViewPager bar on the host activity that shows
+    // the fragments inside of it:::
 
     private fun setViewPager() {
-
         binding.viewPager.adapter = ViewPagerAdapter(this)
-
 
         TabLayoutMediator(binding.tabLayout, binding.viewPager) { tab, position ->
             tab.text = "Page $position"

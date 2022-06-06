@@ -4,9 +4,9 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 
-class ViewPagerAdapter (
+class ViewPagerAdapter(
     fragment: FragmentActivity
-        ):FragmentStateAdapter(fragment) {
+) : FragmentStateAdapter(fragment) {
 
     //counting how many pages there are:::
 
@@ -17,7 +17,7 @@ class ViewPagerAdapter (
     //creating fragments to use:::
 
     override fun createFragment(position: Int): Fragment {
-        return when(position) {
+        return when (position) {
             0 -> {
                 FirstPagerFragment()
             }
