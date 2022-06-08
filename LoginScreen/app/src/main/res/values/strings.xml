@@ -3,7 +3,7 @@
     <string name="title_main">Pão de mel da Vick</string>
     <string name="btn_login">Login</string>
     <string name="btn_register">Register</string>
-    <string name="btn_confirm">Confirm</string>
+    <string name="btnLogout">Logout</string>
     <string name="login_title">Login</string>
     <string name="password_login">Password</string>
     <string name="email_login">Email</string>

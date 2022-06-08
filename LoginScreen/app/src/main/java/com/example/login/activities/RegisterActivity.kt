@@ -1,9 +1,12 @@
-package com.example.login
+package com.example.login.activities
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.login.databinding.ActivityRegisterBinding
+import com.google.firebase.auth.OAuthProvider
+
+
+
 
 class RegisterActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRegisterBinding
@@ -16,6 +19,13 @@ class RegisterActivity : AppCompatActivity() {
         val actionBar = supportActionBar
         actionBar!!.title = "Register"
 
+        val provider = OAuthProvider.newBuilder("twitter.com")
+
+
+
+
+
+    /*
         /*This action is triggered by the save button:*/
 
         binding.btnSaveRegister.setOnClickListener {
@@ -51,6 +61,8 @@ class RegisterActivity : AppCompatActivity() {
         }
     }
 
+    /*Function to validate data in case of null*/
+
     private fun validation(): Boolean {
         val isNotEmpty = (
                 binding.nameRegister.text.toString().isNotEmpty() &&
@@ -60,5 +72,6 @@ class RegisterActivity : AppCompatActivity() {
                         binding.emailRegister.text.toString().isNotEmpty()
                 )
         return isNotEmpty
+    }*/
     }
 }
