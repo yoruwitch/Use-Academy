@@ -7,6 +7,7 @@ import com.example.login.databinding.ActivityFinalBinding
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.auth.ktx.oAuthCredential
 import com.google.firebase.ktx.Firebase
 
 class FinalActivity : AppCompatActivity() {
@@ -30,24 +31,7 @@ class FinalActivity : AppCompatActivity() {
 
         //Twitter stuff:::
 
-        val user = Firebase.auth.currentUser
-        user?.let {
-            for (profile in it.providerData) {
-                // Id of the provider (ex: google.com)
-                val providerId = profile.providerId
-
-
-                // UID specific to the provider
-                val uid = profile.uid
-
-                // Name, email address, and profile photo Url
-                var nameTwitter = profile.displayName
-                nameTwitter = binding
-                val email = profile.email
-                val photoUrl = profile.photoUrl
-            }
-            providerId
-        }
+        //oAuthCredential().
 
 
         // Binding the data from the Login with the Authenticator:::

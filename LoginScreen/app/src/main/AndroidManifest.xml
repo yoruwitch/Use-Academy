@@ -20,6 +20,9 @@
             android:name=".activities.RegisterActivity"
             android:exported="false" />
         <activity
+            android:name=".activities.TwitterAuthActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.MainActivity"
             android:exported="true">
             <intent-filter>

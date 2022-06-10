@@ -1,15 +1,22 @@
 package com.example.login.activities
 
+import android.content.ContentValues.TAG
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.login.databinding.ActivityRegisterBinding
-import com.google.firebase.auth.OAuthProvider
-
-
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 
 class RegisterActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRegisterBinding
+    private lateinit var auth: FirebaseAuth
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,59 +26,58 @@ class RegisterActivity : AppCompatActivity() {
         val actionBar = supportActionBar
         actionBar!!.title = "Register"
 
-        val provider = OAuthProvider.newBuilder("twitter.com")
+        val email = binding.emailRegister
+        val password = binding.emailRegister
 
 
 
+        // Initialize Firebase Auth
+        auth = Firebase.auth
 
-
-    /*
-        /*This action is triggered by the save button:*/
-
-        binding.btnSaveRegister.setOnClickListener {
-
-            val nameRegister = binding.nameRegister.text.toString()
-            val passwordRegister = binding.passwordRegister.text.toString()
-            val countryRegister = binding.countryRegister.text.toString()
-            val cityRegister = binding.cityRegister.text.toString()
-            val emailRegister = binding.emailRegister.text.toString()
-
-            if (validation()) {
-                Intent(this, FinalActivity::class.java).also {
-                    val bundle = Bundle()
-                    with(bundle) {
-                        putString("EXTRA_NAME_REG", nameRegister)
-                        putString("EXTRA_PASSWORD_REG", passwordRegister)
-                        putString("EXTRA_COUNTRY_REG", countryRegister)
-                        putString("EXTRA_CITY_REG", cityRegister)
-                        putString("EXTRA_EMAIL_REG", emailRegister)
-                        it.putExtras(bundle)
-                    }
-                    startActivity(it)
+        auth.createUserWithEmailAndPassword(email, password)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    // Sign in success, update UI with the signed-in user's information
+                    Log.d(TAG, "createUserWithEmail:success")
+                    val user = auth.currentUser
+                    updateUI(user)
+                } else {
+                    // If sign in fails, display a message to the user.
+                    Log.w(TAG, "createUserWithEmail:failure", task.exception)
+                    Toast.makeText(baseContext, "Authentication failed.",
+                        Toast.LENGTH_SHORT).show()
+                    updateUI(null)
                 }
             }
-        }
 
-        /*This action is triggered by the cancel button:*/
 
-        binding.btnCancelRegister.setOnClickListener {
-            Intent(this, MainActivity::class.java).also{
-                startActivity(it)
+
+        binding.btnSaveRegister.setOnClickListener{
+
+
+
             }
         }
+
+
     }
 
-    /*Function to validate data in case of null*/
+    private fun updateUI(user: FirebaseUser?) {
 
-    private fun validation(): Boolean {
-        val isNotEmpty = (
-                binding.nameRegister.text.toString().isNotEmpty() &&
-                        binding.passwordRegister.text.toString().isNotEmpty() &&
-                        binding.countryRegister.text.toString().isNotEmpty() &&
-                        binding.cityRegister.text.toString().isNotEmpty() &&
-                        binding.emailRegister.text.toString().isNotEmpty()
-                )
-        return isNotEmpty
-    }*/
+    }
+
+    public override fun onStart() {
+        super.onStart()
+        // Check if user is signed in (non-null) and update UI accordingly.
+        val currentUser = auth.currentUser
+        if(currentUser != null){
+            reload();
+        }
+    }
+
+    private fun reload() {
+
     }
 }
+
+

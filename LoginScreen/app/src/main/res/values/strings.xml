@@ -8,14 +8,15 @@
     <string name="password_login">Password</string>
     <string name="email_login">Email</string>
     <string name="name_register">Name</string>
-    <string name="country">Country</string>
+    <string name="password">Password</string>
     <string name="city">City</string>
     <string name="btn_save">Save</string>
     <string name="btn_cancel">Cancel</string>
     <string name="email_register">Type your email</string>
     <string name="register_title">Register</string>
-    <string name="password_register">Password</string>
+    <string name="password_confirm">Confirm Password</string>
     <string name="result">Result</string>
     <string name="validate">Empty spaces!</string>
+    <string name="buttonTwitter">Button</string>
 
 </resources>
