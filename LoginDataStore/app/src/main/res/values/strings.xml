@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">LoginDataStore</string>
+    <string name="name">Name</string>
+    <string name="register_title">Register</string>
+    <string name="age_register">Age</string>
+    <string name="city_register">City</string>
+    <string name="nickname">Nickname</string>
+    <string name="welcome">Welcome!</string>
+    <string name="successMessage">Success! You\'re in!</string>
+</resources>
