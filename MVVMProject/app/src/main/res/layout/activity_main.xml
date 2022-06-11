@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".view.MainActivity">
+
+    <ImageView
+        android:id="@+id/background_title"
+        android:layout_width="216dp"
+        android:layout_height="39dp"
+        android:background="@drawable/round_border"
+        app:layout_constraintEnd_toEndOf="@+id/title"
+        app:layout_constraintStart_toStartOf="@+id/title"
+        app:layout_constraintTop_toTopOf="@id/title" />
+
+    <ImageView
+        android:id="@+id/background_body"
+        android:layout_width="385dp"
+        android:layout_height="413dp"
+        android:background="@drawable/round_border"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Plan your travel!"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.436"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+
+        android:id="@+id/distance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="148dp"
+        android:gravity="center"
+        android:hint="Travel distance"
+        android:inputType="numberDecimal"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <EditText
+        android:id="@+id/gas_or_alcohol"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="Write only: Gas or Alchohol"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/distance"
+
+        />
+
+    <EditText
+        android:id="@+id/gas_or_alcohol_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+
+        android:hint="Gas or alchohol price"
+        android:inputType="numberDecimal"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gas_or_alcohol"
+
+        />
+
+    <EditText
+        android:id="@+id/kmPerLitre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="Your vehicle consume"
+        android:inputType="numberDecimal"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/gas_or_alcohol_price" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/round_border"
+        android:hint="Calculate"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/kmPerLitre" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/round_border"
+        android:text="Result"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calculate" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
