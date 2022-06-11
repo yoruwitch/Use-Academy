@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.btnTwitter.setOnClickListener {
-            val intent = Intent(this@MainActivity, TwitterAuthActivity::class.java)
+            val intent = Intent(this@MainActivity, FinalActivity::class.java)
             startActivity(intent)
         }
 
