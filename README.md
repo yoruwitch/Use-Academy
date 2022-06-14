@@ -13,4 +13,4 @@
 * [Login using Data Store](https://github.com/yoruwitch/Use-Academy/tree/main/LoginDataStore)
 * [Contact list using RecyclerView](https://github.com/yoruwitch/Use-Academy/tree/main/ContactList)
 * [Login + Firebase - not ready](https://github.com/yoruwitch/Use-Academy/tree/loginFirebase/LoginScreen)
-
+* [Travel costs + MVVM architecture](https://github.com/yoruwitch/Use-Academy/tree/main/MVVMProject)
