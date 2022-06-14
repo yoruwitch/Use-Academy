@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">LoginFirebase</string>
+    <string name="title_form">Register</string>
+    <string name="title_login">Login</string>
+    <string name="email_register">Email</string>
+    <string name="password_register">Password</string>
+    <string name="btn_register">Register</string>
+    <string name="btn_login">Login</string>
+    <string name="btn_logout">Log Out</string>
+    <string name="register_now">Not registered? Register now!</string>
+    <string name="welcome_message">Welcome! You\'re in our system</string>
+
+
+</resources>
