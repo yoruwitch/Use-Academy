@@ -12,6 +12,4 @@ interface EndpointsApi {
     suspend fun getMeals(
         @Query("c") category: String
     ): Response<MealResponse>
-
-
 }

@@ -1,5 +1,6 @@
 package com.example.retrofitapiapp.viewmodel
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -34,6 +35,7 @@ class MealsViewModel : ViewModel() {
             ).catch { error ->
                 _error.postValue(error.message)
             }.collect { _mealsResponse.postValue(it) }
+
         }
     }
 }
