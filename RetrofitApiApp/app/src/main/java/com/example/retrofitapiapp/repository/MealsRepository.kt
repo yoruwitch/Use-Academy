@@ -9,7 +9,7 @@ import retrofit2.HttpException
 
 class MealsRepository {
 
-    private var endpointsApi = SingletonApi("https://www.themealdb.com/").create()
+    private var endpointsApi = SingletonApi("https://www.themealdb.com").create()
 
     suspend fun getAllMeals(
         category: String

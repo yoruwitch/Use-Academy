@@ -29,6 +29,7 @@ class MealsActivity : AppCompatActivity() {
         viewModel = ViewModelProvider(this).get(MealsViewModel::class.java)
         viewModel.getMeals("Beef")
 
+
         // starting recycler view:::
         startAdapter()
 //        setDataAdapter()
@@ -65,6 +66,7 @@ class MealsActivity : AppCompatActivity() {
             })
         }
     }
+
 
 
     // testing a solution

@@ -8,7 +8,7 @@ interface EndpointsApi {
 
     //https://www.themealdb.com/api/json/v1/1/filter.php?c=Beef
 
-    @GET("/api/json/v1/1/filter.php")
+    @GET("api/json/v1/1/filter.php")
     suspend fun getMeals(
         @Query("c") category: String
     ): Response<MealResponse>
