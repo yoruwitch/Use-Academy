@@ -5,8 +5,8 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
 import com.example.addtheminas.data.StudentDatabase
-import com.example.addtheminas.repository.StudentRepository
 import com.example.addtheminas.model.Student
+import com.example.addtheminas.repository.StudentRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
@@ -27,19 +27,20 @@ class StudentViewModel(application: Application) : AndroidViewModel(application)
             repository.addStudent(student)
         }
     }
-    fun updateStudent(student: Student){
+
+    fun updateStudent(student: Student) {
         viewModelScope.launch(Dispatchers.IO) {
             repository.updateStudent(student)
         }
     }
 
-    fun deleteStudent(student: Student){
+    fun deleteStudent(student: Student) {
         viewModelScope.launch(Dispatchers.IO) {
             repository.deleteStudent(student)
         }
     }
 
-    fun deleteAllStudents(){
+    fun deleteAllStudents() {
         viewModelScope.launch(Dispatchers.IO) {
             repository.deleteAllStudents()
         }

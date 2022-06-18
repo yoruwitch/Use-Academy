@@ -6,7 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.addtheminas.model.Student
 
-@Database(entities = [Student::class], version = 1, exportSchema = false)
+@Database(entities = [Student::class], version = 3, exportSchema = true)
 abstract class StudentDatabase: RoomDatabase() {
 
     abstract fun studentDao(): StudentDao
